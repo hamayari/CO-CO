@@ -1,0 +1,11 @@
+flask
+flask-cors
+torch
+easyocr
+pandas
+scikit-learn
+matplotlib
+streamlit
+pillow
+numpy
+nltk

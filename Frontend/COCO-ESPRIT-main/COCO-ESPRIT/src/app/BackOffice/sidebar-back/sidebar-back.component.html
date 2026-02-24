@@ -1,0 +1,94 @@
+<nav class="pcoded-navbar">
+    <div class="navbar-wrapper">
+        <div class="navbar-brand header-logo">
+            <a href="index.html" class="b-brand">
+                <div class="b-bg">
+                    <i class="feather icon-trending-up"></i>
+                </div>
+                <span class="b-title">Datta Able</span>
+            </a>
+            <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+        </div>
+        <div class="navbar-content scroll-div">
+            <ul class="nav pcoded-inner-navbar">
+                <!-- Dashboard -->
+                <li class="nav-item"routerLink="/admin">
+                    <a  class="nav-link" >
+                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                        <span class="pcoded-mtext" >Dashboard</span>
+                    </a>
+                </li>
+
+                <!-- Forms & Table Section -->
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Forms & table</label>
+                </li>
+                <!-- Foyer Dropdown -->
+                <li class="nav-item" (click)="toggleManagementDropdown($event)">
+                    <a class="nav-item dropdown-toggle">
+                        <span><i class="bi bi-house-heart"></i>Managemnt</span>
+                    </a>
+                    <ul class="nav-dropdown" [style.display]="managementDropdownVisible ? 'block' : 'none'" style="width: 250px;">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="mainFoyer/addFoyer">
+                                <span>User</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" (click)="toggleCarpoolingDropdown($event)">
+                            <a class="nav-link dropdown-toggle">
+                                <span><i class="bi bi-house-heart"></i>Carpooling</span>
+                            </a>
+                            <ul class="nav-dropdown" [style.display]="carpoolingDropdownVisible ? 'block' : 'none'" style="width: 250px;">
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLink="carpooling/requirement">
+                                        <span  >Requirement</span>&nbsp;
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLink="carpooling/announcement">
+                                        <span>Announcement</span>&nbsp;
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" routerLink="carpooling/react">
+                                        <span>React</span>&nbsp;
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="collocation/announcement">
+                                <span>Collocation</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="collocation/house">
+                                <span>Houses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="ListPost">
+                                <span>Post</span>
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="mainFoyer/listFoyer">
+                                <span>MarketPlace</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Logout Button -->
+            <ul class="nav pcoded-inner-navbar logout-section">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" (click)="logout()">
+                        <span><i class="feather icon-log-out"></i>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
